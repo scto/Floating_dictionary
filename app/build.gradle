@@ -1,15 +1,13 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-}
-plugins {
-
-    id("com.google.dagger.hilt.android")
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
     namespace 'com.example.lyka_findmeaning'
     compileSdk 33
+    
     viewBinding {
         enabled = true
     }
@@ -30,10 +28,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    
     kotlinOptions {
         jvmTarget = '1.8'
     }
